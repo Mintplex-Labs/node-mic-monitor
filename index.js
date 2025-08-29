@@ -16,7 +16,17 @@ class MicrophoneMonitor {
     this.filterProcessNameFunc = pFilterFunc;
 
     if (!['darwin', 'win32'].includes(process.platform)) throw new Error('Microphone monitoring is only supported on macOS and Windows');
-    this.platform_utils = process.platform === 'darwin' ? require("bindings")("mac_utils.node") : require("bindings")("win_utils.node");
+    try {
+      this.platform_utils = process.platform === 'darwin'
+        ? require("bindings")("mac_utils.node")
+        : require("bindings")("win_utils.node");
+    } catch (error) {
+      // Fallback to direct require if bindings fails or is not available
+      const addonPath = process.platform === 'darwin'
+        ? path.join(__dirname, 'mac_utils.node')
+        : path.join(__dirname, 'win_utils.node');
+      this.platform_utils = require(addonPath);
+    }
   }
 
   watchForMicrophoneActive() {
