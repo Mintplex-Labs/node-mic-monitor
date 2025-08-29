@@ -2,8 +2,8 @@
 	"name": "node-mic-monitor",
 	"version": "1.0.0",
 	"description": "A native Node.js module with utilities for monitoring microphone usage on macOS and Windows. Forked from https://github.com/abhaybuch/node-mac-utils",
-	"main": "index.js",
-	"types": "index.d.ts",
+	"main": "package/index.js",
+	"types": "package/index.d.ts",
 	"scripts": {
 		"build": "node-gyp rebuild",
 		"build:mac": "node-gyp rebuild --target_platform=darwin --target_arch=x64 && npm run copy:mac",
@@ -18,13 +18,7 @@
 		"test": "node test-mic-monitor.js"
 	},
 	"files": [
-		"index.js",
-		"index.d.ts",
-		"binding.gyp",
-		"macOS/",
-		"windows/",
-		"build/Release/*.node",
-		"prebuilds/"
+		"package/"
 	],
 	"binary": {
 		"module_name": "node-mic-monitor",

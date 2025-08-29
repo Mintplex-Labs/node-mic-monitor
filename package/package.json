@@ -1,0 +1,18 @@
+{
+	"name": "@mintplex-labs/node-mic-monitor",
+	"version": "1.0.0",
+	"repository": {
+		"url": "git+https://github.com/Mintplex-Labs/node-mic-monitor.git"
+	},
+	"scripts": {},
+	"description": "A native Node.js module with utilities for monitoring microphone usage on macOS and Windows.",
+	"main": "index.js",
+	"types": "index.d.ts",
+	"engines": {
+		"node": ">=14.0.0"
+	},
+	"dependencies": {
+		"bindings": "^1.5.0",
+		"node-addon-api": "^8.5.0"
+	}
+}

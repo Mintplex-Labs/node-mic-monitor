@@ -1,4 +1,5 @@
-const MicrophoneMonitor = require('./index');
+// const MicrophoneMonitor = require('./index'); // Development
+// const MicrophoneMonitor = require('./package/index'); // Production
 const micMonitor = new MicrophoneMonitor();
 
 // Handle process termination
