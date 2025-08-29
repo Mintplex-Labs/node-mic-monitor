@@ -1,6 +1,6 @@
 {
 	"name": "@mintplex-labs/node-mic-monitor",
-	"version": "1.0.0",
+	"version": "1.0.2",
 	"repository": {
 		"url": "git+https://github.com/Mintplex-Labs/node-mic-monitor.git"
 	},

@@ -1,6 +1,6 @@
 {
 	"name": "node-mic-monitor",
-	"version": "1.0.0",
+	"version": "1.0.2",
 	"description": "A native Node.js module with utilities for monitoring microphone usage on macOS and Windows. Forked from https://github.com/abhaybuch/node-mac-utils",
 	"main": "package/index.js",
 	"types": "package/index.d.ts",
